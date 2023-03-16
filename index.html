@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="https://sdk.amazonaws.com/js/aws-sdk-8.11.0.js"></script>
+    <script src="./PhotoViewer.js"></script>
+    <script>listAlbums();</script>
+
+    <meta charset="utf-8">
+    <title>My test page</title>
+  </head>
+  <body>
+    <h1>Suspicious Boat Detector</h1>
+    <img src="images/aws_logo.png" alt="The Firefox logo: a flaming fox surrounding the Earth.">
+    <img src="images/dsta_logo.png" alt="The Firefox logo: a flaming fox surrounding the Earth.">
+
+
+    <p>Instructions to use the AI Model:</p>
+
+    <ol> <!-- changed to list in the tutorial -->
+      <li>Click on the "Retrieve Image" Button</li>
+      <li>Wait for the AI Model to analyze</li>
+      <li>If the model outputs "suspicious", please check and raise alert throughout ship transport. Otherwise, click "Override" Button.</li>
+    </ol>
+
+    
+    <script src = "polly.js">
+    
+    </script>
+
+<section data-ng-controller="myCtrl">
+  <img ng-src="{{s3Url}}{{image.Key}}" width="200px" height="200px" ng-repeat="image in allImageData">
+</section>
+
+
+
+
+<button onclick="listAlbums()" style="padding:10px; border-radius:5px; background-color: #F4B41A; color: #143D59; font-size: 20px;">Retrieve and Upload Image</button>
+
+<button onclick="detectFunction()" style="padding:10px; border-radius:5px; background-color: #00203FFF; color: #ADEFD1FF; font-size: 20px;">Analyze/Detect for Suspicious Boats</button>
+
+<button onclick="nextFunction()" style="padding:10px; border-radius:5px; background-color: red; color: white; font-size: 20px;">Override and Next</button>
+
+
+    <p>Click <a href="www.google.com">here</a> 
+      here to view the deck of slides for this project.</p>
+  </body>
+</html>
